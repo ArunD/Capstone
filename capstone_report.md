@@ -7,17 +7,28 @@ September 26 Sep, 2018
 _(approx. 1-2 pages)_
 
 ### Project Overview
+Promotion of Indian Regional language movies (Movie Recommendation System for Indian movies). More than 2000 movies are launched every year in India. Most of them are aware only of Bollywood movies,which comprises of one third of the movies. There has been a lot of development in Gujarathi,Bengali,Marathi,Telugu,Tamil and Kannada movies,which could be enjoyed by audience who are exposed to only Bollywood movies. Currently there are no application or website which would suggest people of movies apart from Bollywood. The motto here is to provide a service which can recommend Indian regional movies. 
+
 In this section, look to provide a high-level overview of the project in layman’s terms. Questions to ask yourself when writing this section:
 - _Has an overview of the project been provided, such as the problem domain, project origin, and related datasets or input data?_
 - _Has enough background information been given so that an uninformed reader would understand the problem domain and following problem statement?_
 
 ### Problem Statement
+
+The project is inspired by Movielens(http://movielens.org). MovieLens is a web site that helps people find movies to watch. It has hundreds of thousands of registered users. It conducts online field experiments in MovieLens in the areas of automated content recommendation, recommendation interfaces, tagging-based recommenders and interfaces, member-maintained databases, and intelligent user interface design. Currently ,an open source database for Indian movies is not available.We are working on it to collect data from IMDB and various production house. 
+
+Movie recommendation system for Indian movies.Currently no recommmendation system has been created for Indian movies. The solution to use deep learning on data provided by Grouplens(https://grouplens.org/datasets/movielens/) and replicate on India Movie database after it is created.
+
+
 In this section, you will want to clearly define the problem that you are trying to solve, including the strategy (outline of tasks) you will use to achieve the desired solution. You should also thoroughly discuss what the intended solution will be for this problem. Questions to ask yourself when writing this section:
 - _Is the problem statement clearly defined? Will the reader understand what you are expecting to solve?_
 - _Have you thoroughly discussed how you will attempt to solve the problem?_
 - _Is an anticipated solution clearly defined? Will the reader understand what results you are looking for?_
 
 ### Metrics
+
+To evaluate accuracy of predicted ratings I will use Root Mean Squared Error (RMSE). (https://en.wikipedia.org/wiki/Root-mean-square_deviation) The root-mean-squared error (RMSE) is a frequently used measure of the differences between values (sample or population values) predicted by a model or an estimator and the values observed. The RMSD represents the square root of the second sample moment of the differences between predicted values and observed values or the quadratic mean of these differences. These deviations are called residuals when the calculations are performed over the data sample that was used for estimation and are called errors (or prediction errors) when computed out-of-sample. The RMSD serves to aggregate the magnitudes of the errors in predictions for various times into a single measure of predictive power. RMSD is a measure of accuracy, to compare forecasting errors of different models for a particular dataset and not between datasets, as it is scale-dependent.
+
 In this section, you will need to clearly define the metrics or calculations you will use to measure performance of a model or result in your project. These calculations and metrics should be justified based on the characteristics of the problem and problem domain. Questions to ask yourself when writing this section:
 - _Are the metrics you’ve chosen to measure the performance of your models clearly discussed and defined?_
 - _Have you provided reasonable justification for the metrics chosen based on the problem and solution?_
