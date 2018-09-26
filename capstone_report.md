@@ -38,6 +38,20 @@ In this section, you will need to clearly define the metrics or calculations you
 _(approx. 2-4 pages)_
 
 ### Data Exploration
+
+Dataset is taken from Grouplens(https://grouplens.org/datasets/movielens/). Structure of files :
+
+==> movies.csv <== movieId,title,genres 1,Toy Story (1995),Adventure|Animation|Children|Comedy|Fantasy 2,Jumanji (1995),Adventure|Children|Fantasy 3,Grumpier Old Men (1995),Comedy|Romance 4,Waiting to Exhale (1995),Comedy|Drama|Romance
+
+==> ratings.csv <== userId,movieId,rating,timestamp 1,110,1.0,1425941529 1,147,4.5,1425942435 1,858,5.0,1425941523 1,1221,5.0,1425941546
+
+==> tags.csv <== userId,movieId,tag,timestamp 1,318,narrated,1425942391 20,4306,Dreamworks,1459855607 20,89302,England,1400778834 20,89302,espionage,1400778836
+
+==> genome-tags.csv <== tagId,tag 1,007 2,007 (series) 3,18th century 4,1920s
+
+==> genome-scores.csv <== movieId,tagId,relevance 1,1,0.024749999999999994 1,2,0.024749999999999994 1,3,0.04899999999999999 1,4,0.07750000000000001
+
+
 In this section, you will be expected to analyze the data you are using for the problem. This data can either be in the form of a dataset (or datasets), input data (or input files), or even an environment. The type of data should be thoroughly described and, if possible, have basic statistics and information presented (such as discussion of input features or defining characteristics about the input or environment). Any abnormalities or interesting qualities about the data that may need to be addressed have been identified (such as features that need to be transformed or the possibility of outliers). Questions to ask yourself when writing this section:
 - _If a dataset is present for this problem, have you thoroughly discussed certain features about the dataset? Has a data sample been provided to the reader?_
 - _If a dataset is present for this problem, are statistics about the dataset calculated and reported? Have any relevant results from this calculation been discussed?_
@@ -51,12 +65,31 @@ In this section, you will need to provide some form of visualization that summar
 - _If a plot is provided, are the axes, title, and datum clearly defined?_
 
 ### Algorithms and Techniques
+
+The main components of my neural network:
+
+1.A left neural network layer that creates Users matrix. A right neural network layer that creates Movies matrix. The input to the left layer are user and rating data The input to the right layer are movies and tags data A merge layer that takes the dot product of these two vectors to return the predicted rating.
+
+2.This code is based on the approach outlined in Alkahest’s blog post Collaborative Filtering in Keras.
+
+3.Compile the model using Mean Squared Error (MSE) as the loss function and the AdaMax learning algorithm.
+
+4.Split the training and test data in 80/20.
+
+5.Train the model on different epochs. Callbacks monitor the validation loss Save the model weights each time the validation loss has improved
+
+6.The next step is to actually predict the ratings a random user will give to a random movie.
+
 In this section, you will need to discuss the algorithms and techniques you intend to use for solving the problem. You should justify the use of each one based on the characteristics of the problem and the problem domain. Questions to ask yourself when writing this section:
 - _Are the algorithms you will use, including any default variables/parameters in the project clearly defined?_
 - _Are the techniques to be used thoroughly discussed and justified?_
 - _Is it made clear how the input data or datasets will be handled by the algorithms and techniques chosen?_
 
 ### Benchmark
+
+Gouplens provides a open soure library to create recommender system LensKit(https://lenskit.org/). We can feed the same data through LensKit and observe if the recommendation provided by engine I created is in par with LensKit.
+
+
 In this section, you will need to provide a clearly defined benchmark result or threshold for comparing across performances obtained by your solution. The reasoning behind the benchmark (in the case where it is not an established result) should be discussed. Questions to ask yourself when writing this section:
 - _Has some result or value been provided that acts as a benchmark for measuring performance?_
 - _Is it clear how this result or value was obtained (whether by data or by hypothesis)?_
