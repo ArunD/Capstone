@@ -90,7 +90,7 @@ The file also includes the code for recommending movies for a user.
 
 Workflow Diagram:
 
-
+file:///home/arun/Downloads/Model_workflow.jpg
 
 PENDING
 
