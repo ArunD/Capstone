@@ -90,9 +90,7 @@ The file also includes the code for recommending movies for a user.
 
 Workflow Diagram:
 
-<img src="Model_workflow.jpeg"
-     alt="Model Workflow"
-     style="float: left; margin-right: 10px;" />
+
 
 
 Defining the model : 
