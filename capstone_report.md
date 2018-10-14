@@ -16,8 +16,8 @@ Movie recommendation system for Indian movies.Currently no recommmendation syste
 
 ### Metrics
 
-To evaluate accuracy of predicted ratings I will use Root Mean Squared Error (RMSE). 
-(https://en.wikipedia.org/wiki/Root-mean-square_deviation) The root-mean-squared error (RMSE) is a frequently used measure of the differences between values (sample or population values) predicted by a model or an estimator and the values observed. The RMSD represents the square root of the second sample moment of the differences between predicted values and observed values or the quadratic mean of these differences. These deviations are called residuals when the calculations are performed over the data sample that was used for estimation and are called errors (or prediction errors) when computed out-of-sample. The RMSD serves to aggregate the magnitudes of the errors in predictions for various times into a single measure of predictive power. RMSD is a measure of accuracy, to compare forecasting errors of different models for a particular dataset and not between datasets, as it is scale-dependent.
+To evaluate accuracy of predicted ratings Root Mean Squared Error (RMSE) is been used.(https://en.wikipedia.org/wiki/Root-mean-square_deviation) 
+The root-mean-squared error (RMSE) is a frequently used measure of the differences between values (sample or population values) predicted by a model or an estimator and the values observed. The RMSD represents the square root of the second sample moment of the differences between predicted values and observed values or the quadratic mean of these differences. These deviations are called residuals when the calculations are performed over the data sample that was used for estimation and are called errors (or prediction errors) when computed out-of-sample. The RMSD serves to aggregate the magnitudes of the errors in predictions for various times into a single measure of predictive power. RMSD is a measure of accuracy, to compare forecasting errors of different models for a particular dataset and not between datasets, as it is scale-dependent.
 
 ## II. Analysis
 
@@ -35,9 +35,6 @@ Dataset is taken from Grouplens(https://grouplens.org/datasets/movielens/). Stru
 		 1,318,narrated,1425942391 20,4306,Dreamworks,1459855607 20,89302,England,1400778834 20,89302,espionage,1400778836
 
 
-### Exploratory Visualization
-
-ISSUE WHAT TO PUT HERE.
 
 
 ### Algorithms and Techniques
@@ -85,13 +82,12 @@ As the recommender system provided by GroupLens is the benchmark and we need to 
 
 ### Implementation
 
-A single code file has been created Movie_Recommender_DL.py to define and train the model.
+A single python notebook has been created Movie_Recommender_DL to define and train the model.
 The file also includes the code for recommending movies for a user.
 
 Workflow Diagram:
 
 ![](Model_workflow.png)
-
 
 Defining the model : 
 2 sequential models merged by dot product.
@@ -239,10 +235,6 @@ This will help us understand if it truly works and how much improvement is neede
 
 ### Improvement
 
-
-
-
-
-
-
-
+The data includes Tags given to movies by users.
+The tags can be converted to tag id .Similar Sequential model as User Id and Movie Id can be created on top of TagId.
+The dot product of userId,MovieId and TagId can given us better recommendation.
