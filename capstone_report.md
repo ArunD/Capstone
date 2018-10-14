@@ -90,7 +90,7 @@ The file also includes the code for recommending movies for a user.
 
 Workflow Diagram:
 
-
+![](Model_workflow.png)
 
 
 Defining the model : 
