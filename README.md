@@ -12,3 +12,6 @@ https://en.wikipedia.org/wiki/Root-mean-square_deviation
 https://en.wikipedia.org/wiki/Matrix_factorization_(recommender_systems)
 https://github.com/lenskit/lenskit-hello
 http://www.fenris.org/2016/03/07/index-html
+
+#Capstone proposal review link
+https://review.udacity.com/#!/reviews/1472891
